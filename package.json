@@ -4,6 +4,9 @@
   "description": "Out lib of JS TDD curse.",
   "main": "index.js",
   "scripts": {
+    "hello": "echo 'Hello my NPM Script..' ",
+    "lint-src": "./node_modules/.bin/eslint src/*.js",
+    "precommit": "echo Now im executing an hook!!! =]",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,5 +23,11 @@
   "bugs": {
     "url": "https://github.com/tunnes/learn-js-with-tdd/issues"
   },
-  "homepage": "https://github.com/tunnes/learn-js-with-tdd#readme"
+  "homepage": "https://github.com/tunnes/learn-js-with-tdd#readme",
+  "devDependencies": {
+    "eslint": "^4.14.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "husky": "^0.14.3"
+  }
 }
