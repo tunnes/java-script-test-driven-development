@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+            WeakSet
+            Muito parecido com o Set, só que com alguams restrições, pois ele não é um iterator logo não posso
+            executar os métodos e usar as features disponiveis no set, mas basicamente a utilidade dele é 
+            para armazenar objetos unicos em uma estrutura de conjuntos vejamos:
+        */ 
+        let people = {name: 'Gustavo'};
+        
+        let veicle = {axix: '4'};
+
+        let weakSet = new WeakSet([veicle, people]);
+    </script>
+</body>
+</html>

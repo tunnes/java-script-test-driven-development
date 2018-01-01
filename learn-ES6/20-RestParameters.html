@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+            RestParameters
+            Isso foi abordado anteriormente mas basicamente consiste na generalização de parametros de uma função,
+            ou seja você usa quando a quantidade de argumentos é variavel, no caso o restPrameters vem no formato de array
+            vejamos um exemplo pratico disso:
+        */ 
+        const toN = (n, ...xs) => xs.map( x => x * n);
+        console.log( toN(2, 1, 2, 3, 4, 5) );
+
+    </script>
+</body>
+</html>

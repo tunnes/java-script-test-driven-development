@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+            Multiple Promisses
+            Também existe a possibilidade de se trabalhar com multiplas promessas, no caso você pode executar alguma ação quando
+            a primeira promessa for cumprida ou quando todas forem. vejamos o exemplo do Willian:
+        */ 
+        let firstPromise = new Promise( 
+            (resolve, reject) => setTimeout( ( ) => { resolve("Okay") }, 2000)
+        );
+        let secondPromise = new Promise( 
+            (resolve, reject) => setTimeout( ( ) => { resolve("Okay") }, 3000) 
+        );
+
+        // Exemplo aguardando as duas:
+        Promise
+            .all([firstPromise, secondPromise])
+            .then(data => console.log(data) );
+
+        // Exemplo aguardando somente a primeira:
+        Promise
+            .race([firstPromise, secondPromise])
+            .then(data => console.log(data) );
+    </script>
+</body>
+</html>

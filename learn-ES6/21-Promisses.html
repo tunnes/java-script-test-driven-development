@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+            Promisses
+            Bom particularmente esse assunto é bem complicado pra mim, pois já faz algum tempo que venho tentando
+            compreender a utilização desse recurso, ele não é tão novo, e serve como solução para o famoso CallBackHell.
+            Uma promisse pelo que peguei é básicamente um objeto com promessa de algo que vai ser feito, no caso ela possui gatilhos
+            que são acionados com base no retorno da promisse.
+
+        */ 
+        let defer = new Promise(
+            (resolve, reject) =>  setTimeout( () => { (true) ? resolve('Funcionou') : reject('Não Funcionou') }, 4000) 
+        );
+            defer
+                .then(data => {return `${data} 2.0`} )
+                .then(data => console.log(data))
+                .catch(data => console.log(data))
+
+        /*
+            No exemplo acima temos dois casos da utilização da promisse, digo pelo menos agora acho que compreendi a utilização de uma,
+            vejamos o setTimeout é uma simulação de um atraso o que seria uma chamada ajax que você não sabe quando vai ser feita e quanto
+            vai ser executada, onde estão a declaração abaixo onde criei as funções para tratamento do resolve e o reject, ficam de standBy
+            aguardando uma resposta.. Já na situação de existirem duas funções then, seria o famoso curing que o Garcia tinha abordado na Faculdade,
+            ou seja o retorno do primeiro "then" vai ser enviado como parametro para a segunda função "then".
+            Mais informações eu li aqui: https://ponyfoo.com/articles/es6-promises-in-depth
+            
+        */ 
+
+    </script>
+</body>
+</html>

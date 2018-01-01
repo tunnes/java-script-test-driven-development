@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+            ArrayFill
+            Uma feature pouco explorada e pode ser util dependendo da situação, mas literalmente 
+            esse método do Array permite popular o array, vejamos
+        */ 
+
+        // Preenche tudo.
+        let xs = new Array(10);
+            xs.fill("A");
+        console.log(xs);
+
+        // Preenche um range de 2 até o indice 5. 
+        let xs2 = new Array(10);
+            xs2.fill("A", 2, 5);
+        console.log(xs2);
+
+    </script>
+</body>
+</html>

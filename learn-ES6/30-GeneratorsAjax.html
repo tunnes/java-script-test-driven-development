@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+            Generators no Ajax
+            Uma utilização interessante do generator é possivelmente no controle de multiplas requisições Ajax,
+            onde para controlar o fluxo dessas é interessante que você tenha uma mesma funções com retornos diferentes,
+            no exemplo que o Willian preparou é possivel notar isso na junção da Promisse com o Generator abaixo vejamos:
+        */ 
+            function ajax(url) {
+                fetch(url)
+                    .then(data => data.json())
+            //      Talvez seja esse o ponto mais interessante pois é aqui onde o Generator é chamado pela segunda vez,
+            //      ou seja quando a primeira requisição é finalizada (Com o retorno do data dela), automaticamente 
+            //      vai ser executada a segunda parte do Generator que no caso é a relativo ao github.
+                    .then(data => dados.next(data));
+            }
+            
+            // https://willianjusten.com.br/search.json
+            // https://api.github.com/users/willianjusten
+            
+            function* ajaxGen() {
+                console.log('Buscando posts...');
+                const posts = yield ajax('https://willianjusten.com.br/search.json');
+                console.log(posts);
+                console.log('Buscando dados github...')
+                const github = yield ajax('https://api.github.com/users/tunnes');
+                console.log(github);
+            }
+            const dados = ajaxGen();
+            dados.next();    
+    </script>
+</body>
+</html>

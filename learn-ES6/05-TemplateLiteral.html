@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+            Template Literal
+            Como visto no Cap03 o "Template Literal" é uma feature do ES6 que permite trabalhar de maneira mais limpa
+            as strings no JavaScript, inicialmente o Willian mostra que é possivel interpolar variáveis e utilizar comandos
+            como por exemplo o "\n" de maneira muito mais simples vejamos:
+        */ 
+            function templateLiteral() {
+                const saoPaulo = ['Santos', 'São Vicente'];
+                console.log(`Morar em ${saoPaulo[0]} é melhor que morar em ${saoPaulo[1]}`);
+
+                console.log(`
+                ${saoPaulo[0]}
+                ${saoPaulo[1]}
+                `);
+            }
+            templateLiteral();
+    </script>
+</body>
+</html>

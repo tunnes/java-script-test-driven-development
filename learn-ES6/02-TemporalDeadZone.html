@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+            Hosting e Temporal Dead Zone:
+            O JavaScript tem um recurso interessante, antes de executar a serie de comandos e rotinas,
+            ele procura todas as variaveis declaradas com "var", por isso, quando voce faz uma chamada 
+            acima e só depois declara a variavel, o JavaScript interpreta como "undefined" pois ele sabe 
+            que a variavel vai ser declarada. Para evitar esse tipo de situação, é bom utilizar a 
+            declaração com o "let" isso é bom para verificar se você ta chamado uma variavel antes mesmo 
+            de ter atribuido ela. Nessa o retorno vai ser um erro.
+        */
+            function temporalDeadZone() {
+                console.log(a);
+                var a = "A";
+            }
+            temporalDeadZone();
+
+            function checkError() {
+                console.log(a);
+                let a = "A";
+
+            }
+            checkError();
+
+    </script>    
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <button id="toUse">ToUse</button>
+    <button id="dontUse">DontUse</button>
+    <script>
+    /*
+       Uma outra coisa que não sabia sobre ArrowFunctions é o funcionamento do seu escopo
+       pois diferente de uma função normal sua referência, ponteiro ou cursor "this" aponta
+       para fora da função no escopo que engloba sua chamada, no caso abaixo se utilizar-mos
+       uma arrowFuncion o resultado de "this" sera o objeto "Window" e não o objeto botão. 
+       
+    */ 
+        function dontArrowFunction() {
+            let btn = document.querySelector('#dontUse');
+                btn.addEventListener('click', function() { 
+                    console.log(this);
+                });
+        }
+        dontArrowFunction();
+    /*
+        Nessa situação o Willian já mostrou que é conveniente utilizar uma arrowFunction pois o 
+        objetivo da função toPresent era pegar o escopo da constante "duck" então como uma arrowFunction
+        usa o "this" do escopo superior isso deixou o codigo limpo e poupou esforços de ter que passar o 
+        this como parametro ou algo do tipo.. 
+    */ 
+        function useArrowFunction() {
+            const duck = {
+                toFly: "im can flying",
+                toWalk: "im can walk",
+                toTalk: function () {
+                    console.log( `Hi im an duck, ${this.toFly}, ${this.toWalk} and im can talk hehe`);
+                },
+                toPresent: function(){
+                    window.setTimeout( () => this.toTalk(), 500 );
+                }    
+            }
+            let btn = document.getElementById('toUse');
+                btn.addEventListener('click', () => duck.toPresent() );
+        }
+        useArrowFunction();
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+            Spreed Operator
+            Junto com o ES6 veio esse novo operador o "..." que serve para desmembrar arrays
+            falando por cima ele não é muito util mas na pratica ele reduz muitas linhas de codigo
+            e quando você pega o jeito é muito mais legivel vejamos algumas de suas utilizações::
+        */ 
+
+        const work = ['Vini', 'Yuji', 'Wesley'];
+        const home = ['Ana', 'Vitor', 'Gustavo'];
+
+        let family = [...home, 'Felipe', ...work];
+        console.log(family);
+        console.log(...family);
+    </script>
+</body>
+</html>

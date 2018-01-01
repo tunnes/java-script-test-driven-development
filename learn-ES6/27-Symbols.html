@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+            Symbols
+            Com o ES6 também veio um novo tipo "primitivo" o symbol que nada mais que é qualquer outro symbol de uma linguagem.
+            basicamente ele trava um valor criando uma referência para o mesmo se você declarar outro symbol igual, ele não sera
+            igual! Vejamos um exemplo que o Willian preparou:
+
+        */ 
+        let foo = Symbol('name');
+        let bar = Symbol('name');
+        console.log(foo == bar);
+        
+        let obj = {
+            [Symbol('name')]: 'Willian',
+            [Symbol('age')]: 26,
+            city: 'Dublin'
+        };
+        
+        const symbols = Object.getOwnPropertySymbols(obj);
+        const data = symbols.map(sym => obj[sym]);
+        console.log(data);
+    </script>
+</body>
+</html>

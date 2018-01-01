@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+            Desctructuring
+            Bom essa featue é simplesmente foda, estou até meio puto por que sempre me incomodei e nunca
+            procurei algo sobre, mas falando por cima consiste em uma tecnica para criar variaveis a partir 
+            de um objeto só, que de uma maneira muito mais elegante, vejamos.
+        */ 
+        let person = {
+            name: 'Ayrton Felipe Souza Tunes',
+            nick: 'tunnes',
+            gender: 'male',
+            age: 22,
+            contact: {
+                mail: 'ayrton.tunes@outlook.com',
+                phone: '+55(13)9-9620-1030',
+                twitter: 'tunnes_'
+            }
+        }
+
+    //  Criando muitas variaveis oriundas de um objeto com o mesmo nome do atributo do objeto em questão. 
+        const { name, nick} = person;
+        console.log(name);
+
+    // Criando variaveis mas com outros nomes:
+        const { 'name':nome, 'nick':apelido } = person;
+        console.log(apelido);
+    
+    //  Criando variaveis do objeto dentro do objeto:
+        const { mail, phone } = person.contact;
+        console.log(phone);
+
+
+    // Muito boa mesmo essa feature =]
+    </script>
+</body>
+</html>
