@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <ul class="veicles">
+        <li>Car</li>
+        <li>Bus</li>
+        <li>Bike</li>
+    </ul>
+    <script>
+        /*
+            Array From
+            Um recurso que particularmente achei muito bacana, por que até hoje tinha dor de cabeça com isso,
+            mas agora no ES6 utilizando o "Array.from()" é possivel converter facilmente listas em array, portanto
+            assim habilitando a utilização dos métodos do "PrototypeArray" como o filter, map, reduce e tudo mais..
+        */ 
+        let veicles = document.querySelectorAll('.veicles li');
+        console.log(veicles);
+
+        veicles = Array.from(veicles);
+        console.log(veicles);
+
+        veicles = veicles.map( veicle => veicle.innerHTML )
+        console.log(veicles);
+
+    </script>
+</body>
+</html>

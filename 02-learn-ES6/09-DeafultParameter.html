@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+            Default Parameters
+            Uma coisa que já cheguei a utilizar o do ES5, utilizando os pipes "||", mas agora no
+            ES6 ficou bem mais simples, agora funciona como no ruby, vejamos:
+        */ 
+            function deafultParameter(P1 = "Parameter 01", P2 = "Parameter 02"){
+                console.log(`(${P1}) AND (${P2})`);
+            }
+            deafultParameter(undefined, 'B');
+            deafultParameter();
+            deafultParameter('A');
+            deafultParameter('A', 'B');
+            
+    </script>
+</body>
+</html>

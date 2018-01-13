@@ -1,0 +1,21 @@
+{
+  "name": "03-js-modules",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --colors --progress",
+    "watch": "npm run build -- --watch",
+    "server": "./node_modules/.bin/webpack-dev-server --inline --open"
+  },
+  "keywords": [],
+  "author": "Ayrton Felipe <ayrton.tunes@outlook.com> (https://tunnes.github.io/)",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-es2015-native-modules": "^6.9.4",
+    "webpack": "^2.7.0",
+    "webpack-dev-server": "^2.10.0"
+  }
+}

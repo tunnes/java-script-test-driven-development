@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+            Iterators and Iterables
+            Como já estou careca de saber mas não conhecia tal recurso no Js, existem iterators (função que itera sobre conjuntos de y) 
+            basicamente a forma exemplificada pelo Willian abaixo, mostra como fazer isso utilizando a propriedade "Symbol.iterator" e 
+            o laço forOf que permite parar a qualquer instante de maneira mais elegante, vejamos:
+        */ 
+        let ns = [1, 2, 3, 4, 5];
+        let itarator = ns[Symbol.iterator]();
+        
+        for (n of ns){
+            console.log(n);
+            if (n === 3) break;
+        }
+    </script>
+</body>
+</html>

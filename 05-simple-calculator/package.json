@@ -1,0 +1,24 @@
+{
+  "name": "05-simple-calculator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint-test": "./node_modules/.bin/eslint src/*.js",
+    "mocha-test": "./node_modules/.bin/mocha specs/*.spec.js --require babel-register",
+    "general-test": "npm run lint-test && npm run mocha-test -- -watch"
+  },
+  "keywords": [],
+  "author": "Ayrton Felipe <ayrton.tunes@outlook.com> (https://tunnes.github.io/)",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-preset-env": "^1.6.1",
+    "babel-register": "^6.26.0",
+    "chai": "^4.1.2",
+    "eslint": "^4.15.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "mocha": "^4.1.0",
+    "webpack": "^3.10.0"
+  }
+}

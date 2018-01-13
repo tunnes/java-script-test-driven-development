@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+            ArrayFind e ArrayFindIndex
+            Essas duas funções também facilitam bastante a tarefas que antigamente
+            eram mais trabalhosas ou chatas de se fazer, por exemplo o método find do objeto
+            Array encontra e retorna o primeiro resultado de dentro de um objeto ou array.
+            O funcionamento dele é semelhante ao método filter, ou seja, ele recebe uma função e opera 
+            executando ela para cada elemento presente do array operando vejamos aguns exemplos.
+        */ 
+        let veicles = [ 
+            {
+                name: "Twister", 
+                cc: "250" 
+            },
+            {
+                name: "CB300",
+                cc: "300"
+            }
+        ];
+        
+        let brothers = ['Felipe', 'Vitor', 'Gustavo'];
+        
+        console.log( brothers.find( x => x === 'Vitor' ));
+        
+        console.log( brothers.findIndex( x => x === 'Gustavo' ));
+        
+        console.log( veicles.find( x => x.name === 'CB300' ));
+        
+    </script>
+</body>
+</html>

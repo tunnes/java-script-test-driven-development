@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+            MySet
+            Uma outra feature bem bacana, pois ele é baseado no iterator e possui um comportamento muito 
+            parecido com um array, pois basicamente ele armazena valores, porem diferente de um array
+            pois o MySet aceita somente valores único, vejamos algumas possibilidades de se trabalhar com isso:
+        */ 
+        //  Criando um set:
+            let mySet = new Set(['Felipe', 'Vitor', 'Gustavo']);
+            mySet.add('Felipe');
+            mySet.has('João');
+            console.log(mySet);
+            console.log(mySet.size);
+            
+        //  Gerando o iterator:
+            myIterator = mySet.values();
+            console.log(myIterator);
+            console.log(myIterator.next());
+
+    </script>
+</body>
+</html>

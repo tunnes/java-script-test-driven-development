@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+            Prototype ES6
+            Particularmente não vi muita complexidade na criação de classes e tudo mais no ES6,
+            na realidade até achei mais bonita e semantica a sintaxe, um ponto que gostei muito 
+            foi a adição do constructor, do getter e do setter mais ou menos por que desrespeita a OOP...
+        */ 
+        class Music{
+            constructor(author, name){
+                this.author = author;
+                this.name = name;
+            }
+            play(){
+                console.log(`Music: ${this.name} by ${this.author}.`);
+            }
+            static classInfo(){
+                console.log("Class to register an music.");
+            }
+            get song(){
+                return "thhus thus thsu quero ver";
+            }
+            set album(album){
+                this.album = album;
+            }
+        }
+
+        mindGames = new Music('John Lennon', 'Mind Games');
+        mindGames.play();
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    /*
+        JavaScript Scopes
+        Uma coisa muito importante é compreender os escopos do JavaScript, pois até o momento
+        por utilizar muito o CoffeeScript acabei não me aprofundado em relação as propriedades
+        puras do JavaScrpt por muitas vezes me limitei a utilização de variáveis de escopo global
+        ou local (FunctionScopes) mas sempre é bom reforçar.
+    */
+
+    /*
+        Global Scope
+        Bom esse é bem simples, quando declaramos uma variável fora de uma função ou bloco, ela
+        tem o seu "modificador de acesso" com escopo global ou seja acessivel em todas as funções
+        do script.
+
+        Function Scope
+        Esse escopo é o escopo de dentro de um bloco ou função por exemplo
+    */
+    function functionScope() {
+        var a;
+        a = 'A';
+        console.log(a);
+    }
+    functionScope();
+
+    /*
+        Declaração "let"
+        Quando declaramos uma variável utilizando o "let" isso quer dizer que ela é acessivel apenas no
+        escopo atual, ou seja quando declarada fora de uma função ela não pode ser acessada de dentro
+        de uma função, a mesma coisa ao contrário só que isso é muito util quando você tem uma variavel
+        global declarada com o "var" e quer usar o mesmo nome de variavel no escopo local da função em
+        que esta trabalhando por exemplo:
+    */
+    var a;
+    var a = "Global A";
+    function letVariables() {
+        let a = "Local A";
+        console.log(a);
+    }
+    letVariables();
+    console.log(a);
+
+    /*
+        Declaração "const"
+        Essa é bem simples, mas aprendi uma coisa muito importante que não fazia ideia que era assim..
+        o valor de uma "const" no JavaScript não é totalmente imutavel, não podemos redeclarar uma
+        "const", mas podemos mudar o valor de um atributo interno como um objeto por exemplo.
+    */
+    const ayrton = {
+        name: 'Ayrton',
+        age: 50,
+    };
+    console.log(ayrton);
+    ayrton.age = 22;
+    console.log(ayrton);
+    
+    </script>
+</body>
+</html>

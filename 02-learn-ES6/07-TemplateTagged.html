@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        strong{
+            text-transform: uppercase;
+            font-weight: 800;
+            font-size: 16px;
+            background-color: rgb(32, 32, 2);
+            color: white;
+            padding: 2px 4px;
+        }
+    </style>
+</head>
+<body>
+
+    <script>
+        /*
+            Template Tagged
+            Um recurso que ainda faz parte da feature "Template Literal" do ES6, com esse recurso é possivel,
+            compreender uma função antes de exibir a string do template, mas é importante que tal função
+            retorne uma string vejamos no exemplo do Willian.
+
+            Outro recurso que utilizo muito no CoffeeScript e o Willian apresentou nesse exemplo é a utilização
+            de parametros multivalorados, como no caso o "...cities" que nada mais é que um array com o restante do
+            que for passado como parâmetros na função "styleCity".
+        */ 
+            
+
+            function templateTagged() {
+                const cities = ['Santos', 'São Paulo', 'São Vicente'];
+                function styleCity(template, ...cities) {  
+                    return template.reduce((total, currentValue, index) => { return `${total} <strong> ${cities[index - 1]} </strong> ${currentValue}` }) 
+                }
+                const phase = styleCity `Moro em ${cities[2]} mas gosto mesmo é de ${cities[0]} e ${cities[1]}`
+                document.body.innerHTML = phase;
+            }
+            templateTagged()
+    </script>
+</body>
+</html>

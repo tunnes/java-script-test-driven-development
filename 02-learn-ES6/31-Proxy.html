@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+            Proxy
+            Esse recurso do ES6 é bem interessante pois ele se comporta exatamente como seu nome já diz,
+            como um proxy e por que também é muito simples atribuir um novo método a um objeto, uma utilização
+            muito boa dele seria para validação de senhas novas ou inputs que tem alguma regra especial vejamos
+            um exemplo. 
+        */ 
+            // let user = {
+            //     name: 'tunnes',
+            //     password: 'password@123'
+            // };
+
+            // let proxy = new Proxy(user, {
+            //     get(target, name){
+            //         return `The user name is ${target[name]}.`;
+            //     },
+            //     get(target, password){
+            //         return `The password is ${target[password]}.`;
+            //     },
+            //     set(target, password, value){
+            //         if (value.length > 5 && (/\d/).test(value) && !(/^[a-zA-Z0-9- ,_]*$/).test(value)){
+            //             target[password] = value
+            //             return true;
+            //         }else{
+            //             console.log('The password must contain sixty characteres or more, special character and numbers.')
+            //             return false;
+            //         }
+                    
+            //     }
+            // });
+
+            let obj = {
+                name: 'Willian',
+                age: 26
+            };
+            let proxy = new Proxy(obj, {
+                get(target, name) {
+                    console.log('Alguém está o pedindo o nome =D');
+                    return target[name];
+                },
+                get(target, age) {
+                    console.log('Alguém está o pedindo minha idade');
+                    return target[age];
+                }
+            });
+            
+    </script>
+</body>
+</html>

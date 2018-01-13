@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+            Prototypal Inheritance
+            Uma boa revisão do que tinha visto na faculdade com o Garcia, bom basicamente o JS trata a questão de OOP
+            com o prototype, quando você da show em um objeto ele mostra no prototype quais são seus métodos e seus atributos
+            no exemplo do Willian vamos disecar uma classe construida com o ES5
+        */ 
+            // Declaração da classe seguida do construtor:
+            function Veicle(cc, model){
+                this.cc = cc;
+                this.model = model;
+            }
+            // Métodos:
+            Veicle.prototype.showDoc = function() { 
+                console.log(`This is an ${this.model}, with ${this.cc}CC.`);
+            };
+
+            // Instânciando:
+            m = new Veicle(300, "Twister")
+            m.showDoc()
+            
+    </script>
+</body>
+</html>

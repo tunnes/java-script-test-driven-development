@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+            Shorthand properties
+            Com o ES6 vieram muitas alterações na maneira de se codificar o JS uma delas são os atalhos,
+            (Shorthand Properties) isso vacilita e deixa o codigo mais limpo vejamos alguns exemplos:
+        */ 
+            function shorthandProperties(){
+                const name = "Ayrton";
+                const age = "22";
+
+                const obj = {
+                    name, 
+                    age,
+                    present(meetName) { 
+                        console.log(`Hi ${meetName}, my name is ${this.name}!`);
+                    }
+                }
+                console.log(obj);
+                obj.present('Fernando');
+            }
+            shorthandProperties();
+    </script>
+</body>
+</html>

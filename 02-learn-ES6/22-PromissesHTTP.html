@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+            Eis um exemplo prático de uma promisse sendo utilizada em uma requisição GET, utilizando a função "fetch()" do JavaScript
+            no caso por default o fetch já vem configurado com GET mas quando for utilizar em requisições mais complexas e configuradas
+            é bom dar uma lida na documentação do MDN: https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
+        */ 
+        //  O "getPost já é uma promisse nesse caso pois o fetch retorna uma promessa;" 
+            let getPosts = fetch('https://willianjusten.com.br/search.json');
+                getPosts
+                    .then(data => data.json())
+                    .then(data => console.log(data))
+                    .catch(data => console.log("Erro.."));
+
+    </script>
+</body>
+</html>

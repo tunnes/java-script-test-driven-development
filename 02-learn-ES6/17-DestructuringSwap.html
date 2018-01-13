@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+            Destructuring Swap
+            Ainda com a feature destructuting existe uma coisa bem bacana é a possibilidade 
+            de se fazer o swap de variáveis, ou seja trocar os valores entre duas variaveis
+            isso é bem simples mas antes precisava por um motivo logico de uma variavel auxiliar
+            vejamos um exemplo de utilização:
+        */ 
+        let a = 1;
+        let b = 2;
+
+        console.log("a:", a);
+        console.log("b:", b);
+
+        [a, b] = [b, a];
+
+        console.log("a:", a);
+        console.log("b:", b);
+    </script>
+</body>
+</html>

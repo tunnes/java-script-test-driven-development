@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+            WeakMap
+            Funciona como o Map e o WeakSet a unica diferença é que não é um iterator, e armazena somente 
+            objetos, vejamos:
+        */ 
+        
+        let people = {name: 'Gustavo'};
+        
+        let veicle = {axix: '4'};
+
+        let weakSet = new WeakMap();
+            weakSet.set(people, 'Uma pessoa');
+            weakSet.set(veicle, 'Um veiculo');
+
+        /*
+            A vantagem do WeakMap e do WeakSet é o trabalho com a referência do que tem dentro dele, ou seja 
+            se você remover um objeto o qual o weakMap ou uma variavel do weakSet automaticamente o garbage collection
+            vai apagar as refências isso é util em certas situações..
+        */ 
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+            Spreed Parameter
+            Isso é mais uma tecnica do que uma feature em si, mas com o operador spreed também é possivel 
+            trabalhar os multiplos parametros de uma função, vejamos:
+        */ 
+        let showDoc = (color, cc, model) => `Motobike ${model} ${color} with ${cc} CC.`;
+        console.log(
+            showDoc(...['black', 600, 'Shadown'])
+        );
+        
+    </script>
+</body>
+</html>
