@@ -1,0 +1,34 @@
+{
+  "name": "06-fizz-buzz",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test:mocha",
+    "test:mocha": "./node_modules/.bin/mocha specs/*.spec.js --require babel-register",
+    "test:coverage": "./node_modules/.bin/nyc npm test",
+    "precommit": "npm run test:coverage"
+  },
+  "keywords": [],
+  "author": "Ayrton Felipe <ayrton.tunes@outlook.com> (https://tunnes.github.io/)",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "chai": "^4.1.2",
+    "eslint": "^4.15.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslit": "^5.0.0",
+    "husky": "^0.14.3",
+    "mocha": "^4.1.0",
+    "nyc": "^11.4.1"
+  },
+  "nyc":{
+    "functions": 50,
+    "lines": 50,
+    "check-coverage": true,
+    "reporter": ["text", "html"],
+    "exclude": ["specs/*"]
+  }
+}
