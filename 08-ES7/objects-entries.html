@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const animals = {
+      camel: 3,
+      ilama: 2,
+      alpaca: 5
+    }
+    const animalsMap = new Map(Object.entries(animals))
+    console.log(animalsMap)
+    console.log(animalsMap.size)
+    console.log(animalsMap.has('ilama'));
+    console.log(animalsMap.has('lion'));
+    console.log(animalsMap.get('alpaca'));
+
+    // Object values:
+    console.log(
+      "Total of animals:", Object.values(animals).reduce( (a, b) => a + b )
+    );
+  </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Async Await</title>
+</head>
+<body>
+  <script>
+    async function getPosts() {
+      try {
+        const response = await fetch('http://jsonplaceholder.typicode.com/posts')
+        const posts = await response.json();
+        posts.map( post => console.log( `${post.id} -> ${post.title}` ) )
+      }
+      catch(error){
+        console.error('Vishh', error)
+      }
+    }
+    // getPosts()
+
+    // Multiple Promisses
+    async function getUsers(users) {
+      const promisses = users.map( user => fetch(`https://api.github.com/users/${user}`).then( data => data.json() ) )
+      users =  await Promise.all(promisses)
+      console.log(
+        users.map( user => `${user.id} - ${user.name}` ) 
+      )
+    }
+    getUsers(['tunnes', 'lipelopeslage', 'gmoraiz'])
+
+  </script>
+</body>
+</html>
